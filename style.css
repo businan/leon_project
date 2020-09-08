@@ -320,6 +320,7 @@ body #container #footer .footer_container .referance a img {
     /* Track */
     /* Handle */
     /* Handle on hover */
+    width: 100%;
     padding-top: 30px;
     margin: 10px;
     display: -webkit-box;
