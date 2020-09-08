@@ -333,7 +333,7 @@ body #container #footer .footer_container .referance a img {
             justify-content: center;
     background: url("https://i.etsystatic.com/7205570/r/il/d2d75a/502555328/il_570xN.502555328_9tbg.jpg"), rgba(0, 0, 0, 0.5);
     /* ,url("https://picsum.photos/800/600?random=2"); */
-    background-size: contain;
+    background-size: auto;
     background-blend-mode: multiply;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
