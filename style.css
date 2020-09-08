@@ -321,7 +321,6 @@ body #container #footer .footer_container .referance a img {
     /* Handle */
     /* Handle on hover */
     width: 100%;
-    height: 100%;
     padding-top: 30px;
     margin: 10px;
     display: -webkit-box;
@@ -336,8 +335,6 @@ body #container #footer .footer_container .referance a img {
     background: url("https://i.etsystatic.com/7205570/r/il/d2d75a/502555328/il_570xN.502555328_9tbg.jpg"), rgba(0, 0, 0, 0.5);
     /* ,url("https://picsum.photos/800/600?random=2"); */
     background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
     background-blend-mode: multiply;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -356,7 +353,7 @@ body #container #footer .footer_container .referance a img {
   }
   body #container {
     width: 100%;
-    height: 90vh;
+    height: 100%;
     display: -ms-grid;
     display: grid;
     gap: 20px;
