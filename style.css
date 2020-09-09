@@ -341,7 +341,7 @@ body #container #footer .footer_container .referance a img {
             box-sizing: border-box;
   }
   body ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
   body ::-webkit-scrollbar-track {
     background: #f1f1f1;
