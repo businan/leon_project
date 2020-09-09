@@ -445,11 +445,11 @@ body #container #footer .footer_container .referance a img {
     grid-area: floata;
     display: -ms-grid;
     display: grid;
-    -ms-grid-rows: 30% 30% 30%;
-        grid-template-rows: 30% 30% 30%;
+    -ms-grid-rows: 28% 28% 28%;
+        grid-template-rows: 28% 28% 28%;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    gap: 4%;
+    gap: 8%;
         grid-template-areas: "A" "B" "C";
   }
   body #container #floata #small-box1 {
@@ -473,7 +473,6 @@ body #container #footer .footer_container .referance a img {
   body #container #floata .small p {
     width: 100%;
     font-size: 0.9rem;
-    margin: 3%;
     color: #f2f2f2;
     text-align: justify;
     overflow-x: hidden;
@@ -537,7 +536,7 @@ body #container #footer .footer_container .referance a img {
     width: 30%;
     height: 100%;
     margin: auto;
-    margin-left: -20px;
+    margin-top: 20px;
   }
   body #container #aside .fav_name a {
     -webkit-writing-mode: vertical-lr;

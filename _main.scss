@@ -367,9 +367,9 @@ body {
         // border: 5px solid yellow;
         grid-area: floata;
         display: grid;
-        grid-template-rows: 30% 30% 30%;
+        grid-template-rows: 28% 28% 28%;
         grid-template-columns: 100%;
-        gap: 4%;
+        gap: 8%;
         grid-template-areas:
           "A"
           "B"
@@ -388,16 +388,17 @@ body {
         }
         .small {
           width: 100%;
-
+          
           p {
             width: 100%;
             font-size: 0.9rem;
-            margin: 3%;
+            
             color: $primaryTextcolor;
             text-align: justify;
             overflow-x: hidden;
             overflow-y: auto;
             height: 140px;
+            
             padding-right: 5%;
             scrollbar-color: auto;
             scrollbar-color: dark;
@@ -457,7 +458,7 @@ body {
           
           
           margin: auto;
-          margin-left: -20px;
+          margin-top: 20px;
           a {
             writing-mode: vertical-lr;
             text-orientation: upright;
