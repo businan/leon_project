@@ -321,7 +321,7 @@ body #container #footer .footer_container .referance a img {
   margin: auto;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 480px) {
   body {
     /* changing scrollbar color and properties */
     /* width */
