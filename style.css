@@ -49,7 +49,7 @@ body #container {
       grid-template-columns: 1fr 1fr 1fr 20%;
   -ms-grid-rows: 1fr 2fr 4fr 1fr;
       grid-template-rows: 1fr 2fr 4fr 1fr;
-      grid-template-areas: "head head head head" "small_box_1 small_box_2 small_box_3 aside" "main main main aside" "footer footer footer footer";
+      grid-template-areas: "head head head head" "floata floata floata aside" "main main main aside" "footer footer footer footer";
 }
 
 body #container .box {
@@ -80,13 +80,13 @@ body #container #head p {
   text-align: justify;
   overflow-x: hidden;
   overflow-y: auto;
-  height: 375px;
+  height: 380px;
 }
 
 body #container #head p img {
   position: relative;
-  top: 1%;
-  margin: 1.5%;
+  top: 10px;
+  margin: 15px;
   float: left;
   opacity: 0.7;
 }
@@ -115,22 +115,37 @@ body #container #head p a {
   color: #ec3e3e;
 }
 
-body #container #small-box1 {
+body #container #floata {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: small_box_1;
+  -ms-grid-column-span: 3;
+  grid-area: floata;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 100%;
+      grid-template-rows: 100%;
+  -ms-grid-columns: 32% 32% 32%;
+      grid-template-columns: 32% 32% 32%;
+  gap: 2%;
+      grid-template-areas: "A B C D";
 }
 
-body #container #small-box2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
-  grid-area: small_box_2;
+body #container #floata #small-box1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: A;
 }
 
-body #container #small-box3 {
+body #container #floata #small-box2 {
   -ms-grid-row: 2;
-  -ms-grid-column: 3;
-  grid-area: small_box_3;
+  -ms-grid-column: 1;
+  grid-area: B;
+}
+
+body #container #floata #small-box3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: C;
 }
 
 body #container .small {
@@ -207,8 +222,8 @@ body #container #aside {
 
 body #container #aside .fav_name {
   width: 100%;
-  margin-top: -25%;
-  margin-bottom: 10%;
+  margin-top: -20%;
+  margin-bottom: 20%;
   font-size: 1.6rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -234,9 +249,11 @@ body #container #aside .fav_name a:hover {
 body #container #aside .aside_container {
   display: -ms-grid;
   display: grid;
-  gap: 3%;
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: (24%)[4];
+      grid-template-rows: repeat(4, 24%);
+  gap: 4%;
       grid-template-areas: "A" "B" "C" "D";
 }
 
@@ -267,7 +284,7 @@ body #container #aside .aside_container #fav_movie4 {
 body #container #aside .aside_container .box_fav_movie img {
   display: block;
   margin: auto;
-  width: 65%;
+  width: 75%;
   opacity: 0.8;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -362,7 +379,7 @@ body #container #footer .footer_container .referance a img {
         grid-template-columns: 31% 31% 31%;
     -ms-grid-rows: 30% 18% 30% 10% 5%;
         grid-template-rows: 30% 18% 30% 10% 5%;
-        grid-template-areas: "head head head " "main main main " "small_box_1 small_box_2 small_box_3 " "aside aside aside" "footer footer footer ";
+        grid-template-areas: "head head head " "main main main " "floata floata floata" "aside aside aside" "footer footer footer ";
   }
   body #container .box {
     height: 100%;
@@ -421,59 +438,76 @@ body #container #footer .footer_container .referance a img {
     text-indent: 0;
     color: #ec3e3e;
   }
-  body #container #small-box1 {
+  body #container #floata {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
-    grid-area: small_box_1;
+    -ms-grid-column-span: 3;
+    grid-area: floata;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 30% 30% 30%;
+        grid-template-rows: 30% 30% 30%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    gap: 2%;
+        grid-template-areas: "A" "B" "C";
   }
-  body #container #small-box2 {
-    -ms-grid-row: 3;
+  body #container #floata #small-box1 {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: A;
+  }
+  body #container #floata #small-box2 {
+    -ms-grid-row: 1;
     -ms-grid-column: 2;
-    grid-area: small_box_2;
+    grid-area: B;
   }
-  body #container #small-box3 {
-    -ms-grid-row: 3;
+  body #container #floata #small-box3 {
+    -ms-grid-row: 1;
     -ms-grid-column: 3;
-    grid-area: small_box_3;
+    grid-area: C;
   }
-  body #container .small {
-    position: relative;
+  body #container #floata .small {
     width: 100%;
   }
-  body #container .small p {
+  body #container #floata .small p {
+    width: 100%;
     font-size: 0.9rem;
     margin: 3%;
     color: #f2f2f2;
     text-align: justify;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 350px;
+    height: 140px;
     padding-right: 5%;
     scrollbar-color: auto;
     scrollbar-color: dark;
     scrollbar-color: light;
   }
-  body #container .small p img {
+  body #container #floata .small p img {
+    float: left;
     display: block;
+    margin: 2%;
+    margin-left: -2%;
     opacity: 0.7;
-    width: 70%;
+    width: 22%;
   }
-  body #container .small p span {
+  body #container #floata .small p span {
     display: block;
     font-size: 1.1rem;
     color: #ec3e3e;
     margin: 2%;
     text-align: center;
   }
-  body #container .small p span a {
+  body #container #floata .small p span a {
     display: inline;
     text-decoration: none;
   }
-  body #container .small p span a:hover {
+  body #container #floata .small p span a:hover {
     text-decoration: underline;
     color: #f2f2f2;
   }
-  body #container .small p a {
+  body #container #floata .small p a {
     display: block;
     text-indent: 0;
     color: #ec3e3e;
@@ -490,55 +524,68 @@ body #container #footer .footer_container .referance a img {
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: aside;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  body #container #aside .fav_name {
+    font-size: 1.2rem;
+    width: 30%;
+    height: 100%;
+    margin: auto;
+  }
+  body #container #aside .fav_name a {
+    -webkit-writing-mode: vertical-lr;
+        -ms-writing-mode: tb-lr;
+            writing-mode: vertical-lr;
+    text-orientation: upright;
+    letter-spacing: -5px;
+    color: #ec3e3e;
+    text-decoration: none;
+  }
+  body #container #aside .fav_name a:hover {
+    text-decoration: underline;
+    color: #f2f2f2;
   }
   body #container #aside .aside_container {
     display: -ms-grid;
     display: grid;
     -ms-grid-rows: 100%;
         grid-template-rows: 100%;
-    -ms-grid-columns: 10% 20% 20% 20% 20%;
-        grid-template-columns: 10% 20% 20% 20% 20%;
+    -ms-grid-columns: (24%)[4];
+        grid-template-columns: repeat(4, 24%);
     gap: 2%;
-        grid-template-areas: "E A B C D";
-  }
-  body #container #aside .aside_container .fav_name {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: E;
-    font-size: 1.2rem;
-  }
-  body #container #aside .aside_container .fav_name a {
-    color: #ec3e3e;
-    text-decoration: none;
-  }
-  body #container #aside .aside_container .fav_name a:hover {
-    text-decoration: underline;
-    color: #f2f2f2;
+        grid-template-areas: "A B C D";
   }
   body #container #aside .aside_container #fav_movie1 {
     -ms-grid-row: 1;
-    -ms-grid-column: 2;
+    -ms-grid-column: 1;
     grid-area: A;
   }
   body #container #aside .aside_container #fav_movie2 {
     -ms-grid-row: 1;
-    -ms-grid-column: 3;
+    -ms-grid-column: 2;
     grid-area: B;
   }
   body #container #aside .aside_container #fav_movie3 {
     -ms-grid-row: 1;
-    -ms-grid-column: 4;
+    -ms-grid-column: 3;
     grid-area: C;
   }
   body #container #aside .aside_container #fav_movie4 {
     -ms-grid-row: 1;
-    -ms-grid-column: 5;
+    -ms-grid-column: 4;
     grid-area: D;
   }
   body #container #aside .aside_container .box_fav_movie img {
     display: block;
     margin: auto;
     width: 100%;
+    margin-left: -15%;
     opacity: 0.8;
     -webkit-transform: scale(1);
     transform: scale(1);

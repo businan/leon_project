@@ -41,7 +41,7 @@ body {
     grid-template-rows: 1fr 2fr 4fr 1fr;
     grid-template-areas:
       "head head head head"
-      "small_box_1 small_box_2 small_box_3 aside"
+      "floata floata floata aside"
       "main main main aside"
       "footer footer footer footer";
 
@@ -63,11 +63,11 @@ body {
         text-align: justify;
         overflow-x: hidden;
         overflow-y: auto;
-        height: 375px;
+        height: 380px;
         img {
           position: relative;
-          top: 1%;
-          margin: 1.5%;
+          top: 10px;
+          margin: 15px;
           float: left;
           opacity: 0.7;
         }
@@ -93,16 +93,27 @@ body {
         }
       }
     }
-    #small-box1 {
-      grid-area: small_box_1;
+    #floata {
+      grid-area: floata;
+      // border:5px solid green;
+      display: grid;
+      grid-template-rows: 100%;
+      grid-template-columns: 32% 32% 32%;
+      gap: 2%;
+      grid-template-areas: "A B C D";
+      #small-box1 {
+        grid-area: A;
+      }
+      #small-box2 {
+        grid-area: B;
+      }
+      #small-box3 {
+        grid-area: C;
+      }
     }
-    #small-box2 {
-      grid-area: small_box_2;
-    }
-    #small-box3 {
-      grid-area: small_box_3;
-    }
+
     .small {
+      // border: 5px solid blue;
       position: relative;
       width: 100%;
 
@@ -158,12 +169,13 @@ body {
       grid-area: aside;
       width: 100%;
 
+      // border: 5px solid yellow;
       display: flex;
       flex-direction: column;
       .fav_name {
         width: 100%;
-        margin-top: -25%;
-        margin-bottom: 10%;
+        margin-top: -20%;
+        margin-bottom: 20%;
         // border: 5px solid orangered;
 
         font-size: 1.6rem;
@@ -181,11 +193,12 @@ body {
       }
 
       .aside_container {
-        // border: 5px solid yellow;
         display: grid;
-        gap: 3%;
 
-        grid-template-rows: repeat(4, 1fr);
+        // border: solid green;
+        grid-template-columns: 100%;
+        grid-template-rows: repeat(4, 24%);
+        gap: 4%;
         grid-template-areas:
           "A"
           "B"
@@ -209,7 +222,7 @@ body {
           img {
             display: block;
             margin: auto;
-            width: 65%;
+            width: 75%;
             opacity: 0.8;
             -webkit-transform: scale(1);
             transform: scale(1);
@@ -295,7 +308,8 @@ body {
       grid-template-areas:
         "head head head "
         "main main main "
-        "small_box_1 small_box_2 small_box_3 "
+        // "small_box_1 small_box_2 small_box_3 "
+        "floata floata floata"
         "aside aside aside"
         "footer footer footer ";
 
@@ -349,115 +363,142 @@ body {
           }
         }
       }
-      #small-box1 {
-        grid-area: small_box_1;
-      }
-      #small-box2 {
-        grid-area: small_box_2;
-      }
-      #small-box3 {
-        grid-area: small_box_3;
-      }
-      .small {
-        position: relative;
-        width: 100%;
+      #floata {
+        // border: 5px solid yellow;
+        grid-area: floata;
+        display: grid;
+        grid-template-rows: 30% 30% 30%;
+        grid-template-columns: 100%;
+        gap: 2%;
+        grid-template-areas:
+          "A"
+          "B"
+          "C";
+        #small-box1 {
+          grid-area: A;
+          //border: 5px solid red;
+        }
+        #small-box2 {
+          grid-area: B;
+          //: 5px solid red;
+        }
+        #small-box3 {
+          grid-area: C;
+          //border: 5px solid red;
+        }
+        .small {
+          width: 100%;
 
-        p {
-          font-size: 0.9rem;
-          margin: 3%;
-          color: $primaryTextcolor;
-          text-align: justify;
-          overflow-x: hidden;
-          overflow-y: auto;
-          height: 350px;
-          padding-right: 5%;
-          scrollbar-color: auto;
-          scrollbar-color: dark;
-          scrollbar-color: light;
+          p {
+            width: 100%;
+            font-size: 0.9rem;
+            margin: 3%;
+            color: $primaryTextcolor;
+            text-align: justify;
+            overflow-x: hidden;
+            overflow-y: auto;
+            height: 140px;
+            padding-right: 5%;
+            scrollbar-color: auto;
+            scrollbar-color: dark;
+            scrollbar-color: light;
 
-          img {
-            //position: absolute;
+            // border: 2px solid blue;
 
-            display: block;
+            img {
+              //position: absolute;
+              float: left;
+              display: block;
+              margin: 2%;
+              margin-left: -2%;
+              opacity: 0.7;
+              width: 22%;
+            }
+            span {
+              display: block;
+              font-size: 1.1rem;
+              color: $secondaryTextcolor;
+              margin: 2%;
+              text-align: center;
 
-            opacity: 0.7;
-            width: 70%;
-          }
-          span {
-            display: block;
-            font-size: 1.1rem;
-            color: $secondaryTextcolor;
-            margin: 2%;
-            text-align: center;
-
+              a {
+                display: inline;
+                text-decoration: none;
+              }
+              a:hover {
+                text-decoration: underline;
+                color: $primaryTextcolor;
+              }
+            }
             a {
-              display: inline;
-              text-decoration: none;
+              display: block;
+              text-indent: 0;
+              color: $secondaryTextcolor;
             }
-            a:hover {
-              text-decoration: underline;
-              color: $primaryTextcolor;
-            }
-          }
-          a {
-            display: block;
-            text-indent: 0;
-            color: $secondaryTextcolor;
           }
         }
       }
+
       #main {
         grid-area: main;
         width: 100%;
+        
       }
       #aside {
         grid-area: aside;
+        // border: #555 solid 5px;
+        display: flex;
+        flex-direction: row;
+        .fav_name {
+          font-size: 1.2rem;
+          // border: 5px solid orange;
+          width: 30%;
+          height: 100%;
+          
+          margin: auto;
+          a {
+            writing-mode: vertical-lr;
+            text-orientation: upright;
+            letter-spacing: -5px;
+            color: $secondaryTextcolor;
+            text-decoration: none;
+            
+            
+           
+          }
+          a:hover {
+            text-decoration: underline;
+            color: $primaryTextcolor;
+          }
+        }
 
         .aside_container {
-          // border: 5px solid yellow;
+          //border: 5px solid yellow;
           display: grid;
           grid-template-rows: 100%;
-          grid-template-columns: 10% 20% 20% 20% 20%;
+          grid-template-columns: repeat(4,24%);
           gap: 2%;
-          grid-template-areas: "E A B C D";
-          
-          .fav_name {
-            grid-area: E;
-            font-size: 1.2rem;
-            
-            a {
-              color: $secondaryTextcolor;
-              text-decoration: none;
-            }
-            a:hover {
-              text-decoration: underline;
-              color: $primaryTextcolor;
-            }
-          }
+          grid-template-areas: "A B C D";
 
           #fav_movie1 {
             grid-area: A;
-            
           }
           #fav_movie2 {
             grid-area: B;
-            
           }
           #fav_movie3 {
             grid-area: C;
-            
           }
           #fav_movie4 {
             grid-area: D;
-            
           }
           .box_fav_movie {
-            
             img {
               // border: 1px dotted red;
               display: block;
               margin: auto;
               width: 100%;
+              margin-left: -15%;
               opacity: 0.8;
               -webkit-transform: scale(1);
               transform: scale(1);
