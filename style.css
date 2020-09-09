@@ -358,19 +358,17 @@ body #container #footer .footer_container .referance a img {
   body #container {
     width: 100%;
     height: 150vh;
-    border: 5px solid red;
     display: -ms-grid;
     display: grid;
     gap: 1.5%;
     -ms-grid-columns: 31% 31% 31%;
         grid-template-columns: 31% 31% 31%;
-    -ms-grid-rows: 20% 25% 18% 10% 10%;
-        grid-template-rows: 20% 25% 18% 10% 10%;
+    -ms-grid-rows: 30% 30% 18% 10% 5%;
+        grid-template-rows: 30% 30% 18% 10% 5%;
         grid-template-areas: "head head head " "small_box_1 small_box_2 small_box_3 " "main main main " "aside aside aside" "footer footer footer ";
   }
   body #container .box {
     height: 100%;
-    border: 2px solid blue;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -389,16 +387,18 @@ body #container #footer .footer_container .referance a img {
     grid-area: head;
   }
   body #container #head p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     margin: 2%;
+    padding: 2%;
     color: #f2f2f2;
     text-align: justify;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 200px;
+    height: 350px;
   }
   body #container #head p img {
     position: relative;
+    width: 45%;
     top: 1%;
     margin: 1.5%;
     float: left;
@@ -406,7 +406,7 @@ body #container #footer .footer_container .referance a img {
   }
   body #container #head p span {
     display: block;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: #ec3e3e;
     margin: 1.5%;
     text-indent: 5%;
@@ -444,13 +444,13 @@ body #container #footer .footer_container .referance a img {
     width: 100%;
   }
   body #container .small p {
-    font-size: 0.7rem;
+    font-size: 0.9rem;
     margin: 3%;
     color: #f2f2f2;
     text-align: justify;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 300px;
+    height: 350px;
     padding-right: 5%;
     scrollbar-color: auto;
     scrollbar-color: dark;
@@ -459,11 +459,11 @@ body #container #footer .footer_container .referance a img {
   body #container .small p img {
     display: block;
     opacity: 0.7;
-    width: 50%;
+    width: 70%;
   }
   body #container .small p span {
     display: block;
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #ec3e3e;
     margin: 2%;
     text-align: center;
@@ -494,33 +494,29 @@ body #container #footer .footer_container .referance a img {
     -ms-grid-column-span: 3;
     grid-area: aside;
   }
-  body #container #aside .fav_name {
-    text-align: justify;
-    margin-top: 50px;
-    font-size: 1.2rem;
-  }
-  body #container #aside .fav_name a {
-    color: #ec3e3e;
-    text-decoration: none;
-  }
-  body #container #aside .fav_name a:hover {
-    text-decoration: underline;
-    color: #f2f2f2;
-  }
   body #container #aside .aside_container {
     display: -ms-grid;
     display: grid;
+    -ms-grid-rows: 100%;
+        grid-template-rows: 100%;
     -ms-grid-columns: 10% 20% 20% 20% 20%;
         grid-template-columns: 10% 20% 20% 20% 20%;
     gap: 2%;
-    -ms-grid-rows: (30%)[4];
-        grid-template-rows: repeat(4, 30%);
         grid-template-areas: "E A B C D";
   }
   body #container #aside .aside_container .fav_name {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: E;
+    font-size: 1.2rem;
+  }
+  body #container #aside .aside_container .fav_name a {
+    color: #ec3e3e;
+    text-decoration: none;
+  }
+  body #container #aside .aside_container .fav_name a:hover {
+    text-decoration: underline;
+    color: #f2f2f2;
   }
   body #container #aside .aside_container #fav_movie1 {
     -ms-grid-row: 1;
@@ -542,13 +538,10 @@ body #container #footer .footer_container .referance a img {
     -ms-grid-column: 5;
     grid-area: D;
   }
-  body #container #aside .aside_container .box_fav_movie {
-    outline: 1px dotted red;
-  }
   body #container #aside .aside_container .box_fav_movie img {
     display: block;
     margin: auto;
-    width: 90%;
+    width: 100%;
     opacity: 0.8;
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -574,7 +567,6 @@ body #container #footer .footer_container .referance a img {
   }
   body #container #footer .footer_container .referance {
     width: 100%;
-    border: 5px solid green;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

@@ -122,7 +122,6 @@ body {
         img {
           //position: absolute;
 
-          
           display: block;
 
           opacity: 0.7;
@@ -158,7 +157,7 @@ body {
     #aside {
       grid-area: aside;
       width: 100%;
-      
+
       display: flex;
       flex-direction: column;
       .fav_name {
@@ -206,7 +205,7 @@ body {
           grid-area: D;
         }
         .box_fav_movie {
-          outline:1px dotted red;
+          outline: 1px dotted red;
           img {
             display: block;
             margin: auto;
@@ -216,7 +215,6 @@ body {
             transform: scale(1);
             -webkit-transition: 0.3s ease-in-out;
             transition: 0.3s ease-in-out;
-            
           }
           img:hover {
             -webkit-transform: scale(1.2);
@@ -259,17 +257,17 @@ body {
     ::-webkit-scrollbar {
       width: 10px;
     }
-  
+
     /* Track */
     ::-webkit-scrollbar-track {
       background: #f1f1f1;
     }
-  
+
     /* Handle */
     ::-webkit-scrollbar-thumb {
       background: #888;
     }
-  
+
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
       background: #555;
@@ -289,21 +287,21 @@ body {
     #container {
       width: 100%;
       height: 150vh;
-      border: 5px solid red;
+      // border: 5px solid red;
       display: grid;
       gap: 1.5%;
       grid-template-columns: 31% 31% 31%;
-      grid-template-rows: 20% 25% 18% 10% 10%;
+      grid-template-rows: 30% 30% 18% 10% 5%;
       grid-template-areas:
         "head head head "
         "small_box_1 small_box_2 small_box_3 "
         "main main main "
         "aside aside aside"
         "footer footer footer ";
-  
+
       .box {
         height: 100%;
-        border: 2px solid blue;
+        // border: 2px solid blue;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -311,17 +309,19 @@ body {
       }
       #head {
         grid-area: head;
-  
+
         p {
-          font-size: 0.8rem;
+          font-size: 1rem;
           margin: 2%;
+          padding: 2%;
           color: $primaryTextcolor;
           text-align: justify;
           overflow-x: hidden;
           overflow-y: auto;
-          height: 200px;
+          height: 350px;
           img {
             position: relative;
+            width: 45%;
             top: 1%;
             margin: 1.5%;
             float: left;
@@ -329,7 +329,7 @@ body {
           }
           span {
             display: block;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             color: $secondaryTextcolor;
             margin: 1.5%;
             text-indent: 5%;
@@ -361,36 +361,35 @@ body {
       .small {
         position: relative;
         width: 100%;
-  
+
         p {
-          font-size: 0.7rem;
+          font-size: 0.9rem;
           margin: 3%;
           color: $primaryTextcolor;
           text-align: justify;
           overflow-x: hidden;
           overflow-y: auto;
-          height: 300px;
+          height: 350px;
           padding-right: 5%;
           scrollbar-color: auto;
           scrollbar-color: dark;
           scrollbar-color: light;
-  
+
           img {
             //position: absolute;
-  
-            
+
             display: block;
-  
+
             opacity: 0.7;
-            width: 50%;
+            width: 70%;
           }
           span {
             display: block;
-            font-size: 1rem;
+            font-size: 1.1rem;
             color: $secondaryTextcolor;
             margin: 2%;
             text-align: center;
-  
+
             a {
               display: inline;
               text-decoration: none;
@@ -410,69 +409,60 @@ body {
       #main {
         grid-area: main;
         width: 100%;
-        
       }
       #aside {
         grid-area: aside;
-        
-        
-        
-        .fav_name {
-          
-          text-align: justify;
-          margin-top: 50px ;
-          // border: 5px solid orangered;
-  
-          font-size: 1.2rem;
-          
-          a {
-            color: $secondaryTextcolor;
-            text-decoration: none;
-          }
-          a:hover {
-            text-decoration: underline;
-            color: $primaryTextcolor;
-          }
-        }
-  
+
         .aside_container {
           // border: 5px solid yellow;
           display: grid;
+          grid-template-rows: 100%;
           grid-template-columns: 10% 20% 20% 20% 20%;
           gap: 2%;
-  
-          grid-template-rows: repeat(4, 30%);
-          grid-template-areas:
-            "E A B C D";
+          grid-template-areas: "E A B C D";
           
           .fav_name {
             grid-area: E;
+            font-size: 1.2rem;
+            
+            a {
+              color: $secondaryTextcolor;
+              text-decoration: none;
+            }
+            a:hover {
+              text-decoration: underline;
+              color: $primaryTextcolor;
+            }
           }
 
           #fav_movie1 {
             grid-area: A;
+            
           }
           #fav_movie2 {
             grid-area: B;
+            
           }
           #fav_movie3 {
             grid-area: C;
+            
           }
           #fav_movie4 {
             grid-area: D;
+            
           }
           .box_fav_movie {
-            outline:1px dotted red;
+            
             img {
+              // border: 1px dotted red;
               display: block;
               margin: auto;
-              width: 90%;
+              width: 100%;
               opacity: 0.8;
               -webkit-transform: scale(1);
               transform: scale(1);
               -webkit-transition: 0.3s ease-in-out;
               transition: 0.3s ease-in-out;
-              
             }
             img:hover {
               -webkit-transform: scale(1.2);
@@ -483,17 +473,17 @@ body {
       }
       #footer {
         grid-area: footer;
-  
+
         .footer_container {
           width: 100%;
           height: 100%;
           display: flex;
-  
+
           // border: 5px solid yellow;
           .referance {
             width: 100%;
-  
-            border: 5px solid green;
+
+            // border: 5px solid green;
             display: flex;
             align-items: center;
             justify-content: space-around;
