@@ -537,6 +537,7 @@ body #container #footer .footer_container .referance a img {
     width: 30%;
     height: 100%;
     margin: auto;
+    margin-left: -20px;
   }
   body #container #aside .fav_name a {
     -webkit-writing-mode: vertical-lr;
@@ -556,8 +557,8 @@ body #container #footer .footer_container .referance a img {
     display: grid;
     -ms-grid-rows: 100%;
         grid-template-rows: 100%;
-    -ms-grid-columns: (24%)[4];
-        grid-template-columns: repeat(4, 24%);
+    -ms-grid-columns: (23%)[4];
+        grid-template-columns: repeat(4, 23%);
     gap: 2%;
         grid-template-areas: "A B C D";
   }
@@ -584,8 +585,7 @@ body #container #footer .footer_container .referance a img {
   body #container #aside .aside_container .box_fav_movie img {
     display: block;
     margin: auto;
-    width: 100%;
-    margin-left: -15%;
+    width: 95%;
     opacity: 0.8;
     -webkit-transform: scale(1);
     transform: scale(1);

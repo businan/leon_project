@@ -455,7 +455,9 @@ body {
           width: 30%;
           height: 100%;
           
+          
           margin: auto;
+          margin-left: -20px;
           a {
             writing-mode: vertical-lr;
             text-orientation: upright;
@@ -476,7 +478,7 @@ body {
           //border: 5px solid yellow;
           display: grid;
           grid-template-rows: 100%;
-          grid-template-columns: repeat(4,24%);
+          grid-template-columns: repeat(4,23%);
           gap: 2%;
           grid-template-areas: "A B C D";
 
@@ -497,8 +499,8 @@ body {
               // border: 1px dotted red;
               display: block;
               margin: auto;
-              width: 100%;
-              margin-left: -15%;
+              width: 95%;
+              
               opacity: 0.8;
               -webkit-transform: scale(1);
               transform: scale(1);
