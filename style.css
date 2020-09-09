@@ -328,8 +328,9 @@ body #container #footer .footer_container .referance a img {
     /* Track */
     /* Handle */
     /* Handle on hover */
+    widows: 100px;
     padding: 3% 0;
-    margin: 0;
+    margin: 10px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -355,17 +356,17 @@ body #container #footer .footer_container .referance a img {
     background: #555;
   }
   body #container {
-    width: 50%;
+    width: 100%;
     height: 150vh;
     border: 5px solid red;
     display: -ms-grid;
     display: grid;
     gap: 1.5%;
-    -ms-grid-columns: 1fr 1fr 1fr 20%;
-        grid-template-columns: 1fr 1fr 1fr 20%;
-    -ms-grid-rows: 1fr 2fr 4fr 1fr;
-        grid-template-rows: 1fr 2fr 4fr 1fr;
-        grid-template-areas: "head head head head" "small_box_1 small_box_2 small_box_3 aside" "main main main aside" "footer footer footer footer";
+    -ms-grid-columns: 31% 31% 31%;
+        grid-template-columns: 31% 31% 31%;
+    -ms-grid-rows: 20% 25% 18% 10% 10%;
+        grid-template-rows: 20% 25% 18% 10% 10%;
+        grid-template-areas: "head head head " "small_box_1 small_box_2 small_box_3 " "main main main " "aside aside aside" "footer footer footer ";
   }
   body #container .box {
     height: 100%;
@@ -384,11 +385,11 @@ body #container #footer .footer_container .referance a img {
   body #container #head {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 3;
     grid-area: head;
   }
   body #container #head p {
-    font-size: 1.3rem;
+    font-size: 0.8rem;
     margin: 2%;
     color: #f2f2f2;
     text-align: justify;
@@ -405,7 +406,7 @@ body #container #footer .footer_container .referance a img {
   }
   body #container #head p span {
     display: block;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     color: #ec3e3e;
     margin: 1.5%;
     text-indent: 5%;
@@ -443,7 +444,7 @@ body #container #footer .footer_container .referance a img {
     width: 100%;
   }
   body #container .small p {
-    font-size: 1rem;
+    font-size: 0.7rem;
     margin: 3%;
     color: #f2f2f2;
     text-align: justify;
@@ -462,7 +463,7 @@ body #container #footer .footer_container .referance a img {
   }
   body #container .small p span {
     display: block;
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: #ec3e3e;
     margin: 2%;
     text-align: center;
@@ -486,35 +487,17 @@ body #container #footer .footer_container .referance a img {
     -ms-grid-column-span: 3;
     grid-area: main;
     width: 100%;
-    height: 300px;
   }
   body #container #aside {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 4;
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     grid-area: aside;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
   body #container #aside .fav_name {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 10px;
-    font-size: 1.6rem;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    text-align: justify;
+    margin-top: 50px;
+    font-size: 1.2rem;
   }
   body #container #aside .fav_name a {
     color: #ec3e3e;
@@ -527,29 +510,36 @@ body #container #footer .footer_container .referance a img {
   body #container #aside .aside_container {
     display: -ms-grid;
     display: grid;
-    gap: 3%;
+    -ms-grid-columns: 10% 20% 20% 20% 20%;
+        grid-template-columns: 10% 20% 20% 20% 20%;
+    gap: 2%;
     -ms-grid-rows: (30%)[4];
         grid-template-rows: repeat(4, 30%);
-        grid-template-areas: "A" "B" "C" "D";
+        grid-template-areas: "E A B C D";
+  }
+  body #container #aside .aside_container .fav_name {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: E;
   }
   body #container #aside .aside_container #fav_movie1 {
     -ms-grid-row: 1;
-    -ms-grid-column: 1;
+    -ms-grid-column: 2;
     grid-area: A;
   }
   body #container #aside .aside_container #fav_movie2 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
     grid-area: B;
   }
   body #container #aside .aside_container #fav_movie3 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 4;
     grid-area: C;
   }
   body #container #aside .aside_container #fav_movie4 {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
+    -ms-grid-row: 1;
+    -ms-grid-column: 5;
     grid-area: D;
   }
   body #container #aside .aside_container .box_fav_movie {
@@ -558,7 +548,7 @@ body #container #footer .footer_container .referance a img {
   body #container #aside .aside_container .box_fav_movie img {
     display: block;
     margin: auto;
-    width: 65%;
+    width: 90%;
     opacity: 0.8;
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -570,9 +560,9 @@ body #container #footer .footer_container .referance a img {
     transform: scale(1.2);
   }
   body #container #footer {
-    -ms-grid-row: 4;
+    -ms-grid-row: 5;
     -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
+    -ms-grid-column-span: 3;
     grid-area: footer;
   }
   body #container #footer .footer_container {

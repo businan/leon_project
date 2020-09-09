@@ -274,9 +274,9 @@ body {
     ::-webkit-scrollbar-thumb:hover {
       background: #555;
     }
-  
+    widows: 100px;
     padding: 3% 0;
-    margin: 0;
+    margin: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -287,18 +287,19 @@ body {
     // background-blend-mode: multiply;
     box-sizing: border-box;
     #container {
-      width: 50%;
+      width: 100%;
       height: 150vh;
       border: 5px solid red;
       display: grid;
       gap: 1.5%;
-      grid-template-columns: 1fr 1fr 1fr 20%;
-      grid-template-rows: 1fr 2fr 4fr 1fr;
+      grid-template-columns: 31% 31% 31%;
+      grid-template-rows: 20% 25% 18% 10% 10%;
       grid-template-areas:
-        "head head head head"
-        "small_box_1 small_box_2 small_box_3 aside"
-        "main main main aside"
-        "footer footer footer footer";
+        "head head head "
+        "small_box_1 small_box_2 small_box_3 "
+        "main main main "
+        "aside aside aside"
+        "footer footer footer ";
   
       .box {
         height: 100%;
@@ -312,7 +313,7 @@ body {
         grid-area: head;
   
         p {
-          font-size: 1.3rem;
+          font-size: 0.8rem;
           margin: 2%;
           color: $primaryTextcolor;
           text-align: justify;
@@ -328,7 +329,7 @@ body {
           }
           span {
             display: block;
-            font-size: 1.6rem;
+            font-size: 1.2rem;
             color: $secondaryTextcolor;
             margin: 1.5%;
             text-indent: 5%;
@@ -362,7 +363,7 @@ body {
         width: 100%;
   
         p {
-          font-size: 1rem;
+          font-size: 0.7rem;
           margin: 3%;
           color: $primaryTextcolor;
           text-align: justify;
@@ -385,7 +386,7 @@ body {
           }
           span {
             display: block;
-            font-size: 1.3rem;
+            font-size: 1rem;
             color: $secondaryTextcolor;
             margin: 2%;
             text-align: center;
@@ -409,24 +410,21 @@ body {
       #main {
         grid-area: main;
         width: 100%;
-        height: 300px;
+        
       }
       #aside {
         grid-area: aside;
         
         
-        display: flex;
-        flex-direction: column;
+        
         .fav_name {
-          width: 100%;
-          text-align: center;
-          margin-bottom: 10px;
+          
+          text-align: justify;
+          margin-top: 50px ;
           // border: 5px solid orangered;
   
-          font-size: 1.6rem;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          font-size: 1.2rem;
+          
           a {
             color: $secondaryTextcolor;
             text-decoration: none;
@@ -440,15 +438,17 @@ body {
         .aside_container {
           // border: 5px solid yellow;
           display: grid;
-          gap: 3%;
+          grid-template-columns: 10% 20% 20% 20% 20%;
+          gap: 2%;
   
           grid-template-rows: repeat(4, 30%);
           grid-template-areas:
-            "A"
-            "B"
-            "C"
-            "D";
-  
+            "E A B C D";
+          
+          .fav_name {
+            grid-area: E;
+          }
+
           #fav_movie1 {
             grid-area: A;
           }
@@ -466,7 +466,7 @@ body {
             img {
               display: block;
               margin: auto;
-              width: 65%;
+              width: 90%;
               opacity: 0.8;
               -webkit-transform: scale(1);
               transform: scale(1);
