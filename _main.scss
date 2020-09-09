@@ -287,7 +287,7 @@ body {
     // background-blend-mode: multiply;
     box-sizing: border-box;
     #container {
-      width: 100%;
+      width: 50%;
       height: 150vh;
       border: 5px solid red;
       display: grid;
@@ -318,7 +318,7 @@ body {
           text-align: justify;
           overflow-x: hidden;
           overflow-y: auto;
-          height: 375px;
+          height: 200px;
           img {
             position: relative;
             top: 1%;

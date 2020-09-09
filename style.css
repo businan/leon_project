@@ -355,7 +355,7 @@ body #container #footer .footer_container .referance a img {
     background: #555;
   }
   body #container {
-    width: 100%;
+    width: 50%;
     height: 150vh;
     border: 5px solid red;
     display: -ms-grid;
@@ -394,7 +394,7 @@ body #container #footer .footer_container .referance a img {
     text-align: justify;
     overflow-x: hidden;
     overflow-y: auto;
-    height: 375px;
+    height: 200px;
   }
   body #container #head p img {
     position: relative;
