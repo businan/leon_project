@@ -20,7 +20,7 @@ body {
     background: #555;
   }
 
-  padding: 100px 0;
+  padding: 3% 0;
   margin: 0;
   display: flex;
   align-items: center;
@@ -34,10 +34,10 @@ body {
   #container {
     width: 1000px;
     height: 150vh;
-    // border: 5px solid red;
+    border: 5px solid red;
     display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr 1fr 1fr 200px;
+    gap: 1.5%;
+    grid-template-columns: 1fr 1fr 1fr 20%;
     grid-template-rows: 1fr 2fr 4fr 1fr;
     grid-template-areas:
       "head head head head"
@@ -47,7 +47,7 @@ body {
 
     .box {
       height: 100%;
-      // border: 2px solid blue;
+      border: 2px solid blue;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -58,16 +58,16 @@ body {
 
       p {
         font-size: 1.3rem;
-        margin: 10px;
+        margin: 2%;
         color: $primaryTextcolor;
         text-align: justify;
         overflow-x: hidden;
         overflow-y: auto;
-        height: 400px;
+        height: 375px;
         img {
           position: relative;
-          top: 10px;
-          margin: 15px;
+          top: 1%;
+          margin: 1.5%;
           float: left;
           opacity: 0.7;
         }
@@ -75,8 +75,8 @@ body {
           display: block;
           font-size: 1.6rem;
           color: $secondaryTextcolor;
-          margin: 15px;
-          text-indent: 50px;
+          margin: 1.5%;
+          text-indent: 5%;
           a {
             display: inline;
             text-decoration: none;
@@ -108,13 +108,13 @@ body {
 
       p {
         font-size: 1rem;
-        margin: 10px;
+        margin: 3%;
         color: $primaryTextcolor;
         text-align: justify;
         overflow-x: hidden;
         overflow-y: auto;
         height: 400px;
-        padding-right: 10px;
+        padding-right: 5%;
         scrollbar-color: auto;
         scrollbar-color: dark;
         scrollbar-color: light;
@@ -122,18 +122,17 @@ body {
         img {
           //position: absolute;
 
-          margin-right: 15px;
+          
           display: block;
 
           opacity: 0.7;
-          width: 100px;
+          width: 50%;
         }
         span {
           display: block;
           font-size: 1.3rem;
           color: $secondaryTextcolor;
-          margin: 10px;
-
+          margin: 2%;
           text-align: center;
 
           a {
@@ -154,16 +153,18 @@ body {
     }
     #main {
       grid-area: main;
+      width: 100%;
     }
     #aside {
       grid-area: aside;
       width: 100%;
-      height: 100%;
+      
       display: flex;
       flex-direction: column;
       .fav_name {
         width: 100%;
-        height: 100px;
+        margin-top: -25%;
+        margin-bottom: 10%;
         // border: 5px solid orangered;
 
         font-size: 1.6rem;
@@ -181,11 +182,9 @@ body {
       }
 
       .aside_container {
-        
-        
         // border: 5px solid yellow;
         display: grid;
-        gap: 20px;
+        gap: 3%;
 
         grid-template-rows: repeat(4, 1fr);
         grid-template-areas:
@@ -207,19 +206,21 @@ body {
           grid-area: D;
         }
         .box_fav_movie {
-          
-          // outline:1px dotted red;
+          outline:1px dotted red;
           img {
-            width: 120px;
+            display: block;
+            margin: auto;
+            width: 65%;
             opacity: 0.8;
             -webkit-transform: scale(1);
-	          transform: scale(1);
-	          -webkit-transition: .3s ease-in-out;
-	          transition: .3s ease-in-out;
+            transform: scale(1);
+            -webkit-transition: 0.3s ease-in-out;
+            transition: 0.3s ease-in-out;
+            
           }
           img:hover {
             -webkit-transform: scale(1.2);
-	          transform: scale(1.2);
+            transform: scale(1.2);
           }
         }
       }
@@ -231,30 +232,27 @@ body {
         width: 100%;
         height: 100%;
         display: flex;
-        
+
         // border: 5px solid yellow;
         .referance {
           width: 100%;
-          
-          // border: 5px solid green;
+
+          border: 5px solid green;
           display: flex;
           align-items: center;
-          justify-content: center;
+          justify-content: space-around;
           a img {
             display: block;
-            width: 100px;
+            width: 40%;
             opacity: 0.7;
-            
+            margin: auto;
           }
         }
       }
     }
   }
 }
-@media screen and (max-width: 350px){
-
-
-  /*write your CSS-Code here*/
+@media screen and (max-width: 700px) {
   body {
     /* changing scrollbar color and properties */
     /* width */
@@ -276,30 +274,25 @@ body {
     ::-webkit-scrollbar-thumb:hover {
       background: #555;
     }
-    width: 100%;
-    
-    padding-top: 30px;
-    margin: 10px;
+  
+    padding: 3% 0;
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: url("https://i.etsystatic.com/7205570/r/il/d2d75a/502555328/il_570xN.502555328_9tbg.jpg"),
-      rgba(0, 0, 0, 0.5);
-    /* ,url("https://picsum.photos/800/600?random=2"); */
-    background-size: cover;
-    
-    background-blend-mode: multiply;
+    // background: url("https://i.etsystatic.com/7205570/r/il/d2d75a/502555328/il_570xN.502555328_9tbg.jpg"),
+    //   rgba(0, 0, 0, 0.5);
+    // /* ,url("https://picsum.photos/800/600?random=2"); */
+    // background-size: cover;
+    // background-blend-mode: multiply;
     box-sizing: border-box;
-
-
-    
     #container {
       width: 100%;
-      
-      // border: 5px solid red;
+      height: 150vh;
+      border: 5px solid red;
       display: grid;
-      gap: 20px;
-      grid-template-columns: 1fr 1fr 1fr 170px;
+      gap: 1.5%;
+      grid-template-columns: 1fr 1fr 1fr 20%;
       grid-template-rows: 1fr 2fr 4fr 1fr;
       grid-template-areas:
         "head head head head"
@@ -309,7 +302,7 @@ body {
   
       .box {
         height: 100%;
-        // border: 2px solid blue;
+        border: 2px solid blue;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -320,16 +313,16 @@ body {
   
         p {
           font-size: 1.3rem;
-          margin: 10px;
+          margin: 2%;
           color: $primaryTextcolor;
           text-align: justify;
           overflow-x: hidden;
           overflow-y: auto;
-          height: 300px;
+          height: 375px;
           img {
             position: relative;
-            top: 10px;
-            margin: 15px;
+            top: 1%;
+            margin: 1.5%;
             float: left;
             opacity: 0.7;
           }
@@ -337,8 +330,8 @@ body {
             display: block;
             font-size: 1.6rem;
             color: $secondaryTextcolor;
-            margin: 15px;
-            text-indent: 50px;
+            margin: 1.5%;
+            text-indent: 5%;
             a {
               display: inline;
               text-decoration: none;
@@ -367,16 +360,16 @@ body {
       .small {
         position: relative;
         width: 100%;
-        
+  
         p {
           font-size: 1rem;
-          margin: 10px;
+          margin: 3%;
           color: $primaryTextcolor;
           text-align: justify;
           overflow-x: hidden;
           overflow-y: auto;
-          height: 500px;
-          padding-right: 10px;
+          height: 300px;
+          padding-right: 5%;
           scrollbar-color: auto;
           scrollbar-color: dark;
           scrollbar-color: light;
@@ -384,18 +377,17 @@ body {
           img {
             //position: absolute;
   
-            margin-right: 15px;
+            
             display: block;
   
             opacity: 0.7;
-            width: 100px;
+            width: 50%;
           }
           span {
             display: block;
             font-size: 1.3rem;
             color: $secondaryTextcolor;
-            margin: 10px;
-  
+            margin: 2%;
             text-align: center;
   
             a {
@@ -416,17 +408,19 @@ body {
       }
       #main {
         grid-area: main;
-        height: 400px;
+        width: 100%;
+        height: 300px;
       }
       #aside {
         grid-area: aside;
-        width: 100%;
-        // height: 100px;
+        
+        
         display: flex;
         flex-direction: column;
         .fav_name {
           width: 100%;
-          height: 50px;
+          text-align: center;
+          margin-bottom: 10px;
           // border: 5px solid orangered;
   
           font-size: 1.6rem;
@@ -444,13 +438,11 @@ body {
         }
   
         .aside_container {
-          
-          
           // border: 5px solid yellow;
           display: grid;
-          gap: 20px;
+          gap: 3%;
   
-          grid-template-rows: repeat(4, 1fr);
+          grid-template-rows: repeat(4, 30%);
           grid-template-areas:
             "A"
             "B"
@@ -470,15 +462,17 @@ body {
             grid-area: D;
           }
           .box_fav_movie {
-            
-            // outline:1px dotted red;
+            outline:1px dotted red;
             img {
-              width: 120px;
+              display: block;
+              margin: auto;
+              width: 65%;
               opacity: 0.8;
               -webkit-transform: scale(1);
               transform: scale(1);
-              -webkit-transition: .3s ease-in-out;
-              transition: .3s ease-in-out;
+              -webkit-transition: 0.3s ease-in-out;
+              transition: 0.3s ease-in-out;
+              
             }
             img:hover {
               -webkit-transform: scale(1.2);
@@ -494,26 +488,24 @@ body {
           width: 100%;
           height: 100%;
           display: flex;
-          
+  
           // border: 5px solid yellow;
           .referance {
             width: 100%;
-            
-            // border: 5px solid green;
+  
+            border: 5px solid green;
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
             a img {
               display: block;
-              width: 100px;
-              opacity: 0.6;
-              
+              width: 40%;
+              opacity: 0.7;
+              margin: auto;
             }
           }
         }
       }
     }
   }
-
-
 }
