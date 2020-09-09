@@ -449,7 +449,7 @@ body #container #footer .footer_container .referance a img {
         grid-template-rows: 30% 30% 30%;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    gap: 2%;
+    gap: 4%;
         grid-template-areas: "A" "B" "C";
   }
   body #container #floata #small-box1 {
