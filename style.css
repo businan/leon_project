@@ -42,7 +42,6 @@ body ::-webkit-scrollbar-thumb:hover {
 body #container {
   width: 1000px;
   height: 150vh;
-  border: 5px solid red;
   display: -ms-grid;
   display: grid;
   gap: 1.5%;
@@ -55,7 +54,6 @@ body #container {
 
 body #container .box {
   height: 100%;
-  border: 2px solid blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -266,10 +264,6 @@ body #container #aside .aside_container #fav_movie4 {
   grid-area: D;
 }
 
-body #container #aside .aside_container .box_fav_movie {
-  outline: 1px dotted red;
-}
-
 body #container #aside .aside_container .box_fav_movie img {
   display: block;
   margin: auto;
@@ -303,7 +297,6 @@ body #container #footer .footer_container {
 
 body #container #footer .footer_container .referance {
   width: 100%;
-  border: 5px solid green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,6 +333,10 @@ body #container #footer .footer_container .referance a img {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    background: url("https://i.etsystatic.com/7205570/r/il/d2d75a/502555328/il_570xN.502555328_9tbg.jpg"), rgba(0, 0, 0, 0.5);
+    /* ,url("https://picsum.photos/800/600?random=2"); */
+    background-size: cover;
+    background-blend-mode: multiply;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
   }
@@ -363,9 +360,9 @@ body #container #footer .footer_container .referance a img {
     gap: 1.5%;
     -ms-grid-columns: 31% 31% 31%;
         grid-template-columns: 31% 31% 31%;
-    -ms-grid-rows: 30% 30% 18% 10% 5%;
-        grid-template-rows: 30% 30% 18% 10% 5%;
-        grid-template-areas: "head head head " "small_box_1 small_box_2 small_box_3 " "main main main " "aside aside aside" "footer footer footer ";
+    -ms-grid-rows: 30% 18% 30% 10% 5%;
+        grid-template-rows: 30% 18% 30% 10% 5%;
+        grid-template-areas: "head head head " "main main main " "small_box_1 small_box_2 small_box_3 " "aside aside aside" "footer footer footer ";
   }
   body #container .box {
     height: 100%;
@@ -425,17 +422,17 @@ body #container #footer .footer_container .referance a img {
     color: #ec3e3e;
   }
   body #container #small-box1 {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 1;
     grid-area: small_box_1;
   }
   body #container #small-box2 {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 2;
     grid-area: small_box_2;
   }
   body #container #small-box3 {
-    -ms-grid-row: 2;
+    -ms-grid-row: 3;
     -ms-grid-column: 3;
     grid-area: small_box_3;
   }
@@ -482,7 +479,7 @@ body #container #footer .footer_container .referance a img {
     color: #ec3e3e;
   }
   body #container #main {
-    -ms-grid-row: 3;
+    -ms-grid-row: 2;
     -ms-grid-column: 1;
     -ms-grid-column-span: 3;
     grid-area: main;
