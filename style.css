@@ -24,7 +24,7 @@ body {
 }
 
 body ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 
 body ::-webkit-scrollbar-track {
@@ -127,7 +127,7 @@ body #container #floata {
   -ms-grid-columns: 32% 32% 32%;
       grid-template-columns: 32% 32% 32%;
   gap: 2%;
-      grid-template-areas: "A B C D";
+      grid-template-areas: "A B C";
 }
 
 body #container #floata #small-box1 {
@@ -314,14 +314,12 @@ body #container #footer .footer_container {
 
 body #container #footer .footer_container .referance {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 body #container #footer .footer_container .referance a img {
@@ -375,8 +373,8 @@ body #container #footer .footer_container .referance a img {
     display: -ms-grid;
     display: grid;
     gap: 1.5%;
-    -ms-grid-columns: 31% 31% 31%;
-        grid-template-columns: 31% 31% 31%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
     -ms-grid-rows: 30% 18% 30% 10% 5%;
         grid-template-rows: 30% 18% 30% 10% 5%;
         grid-template-areas: "head head head " "main main main " "floata floata floata" "aside aside aside" "footer footer footer ";
