@@ -329,7 +329,7 @@ body #container #footer .footer_container .referance a img {
   margin: auto;
 }
 
-@media screen and (max-width: 320px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   body {
     /* changing scrollbar color and properties */
     /* width */
